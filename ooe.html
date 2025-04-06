@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overwatch Origins Edition</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="ooe.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/Overwatch.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Overwatch Origins Edition | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$19.99 USD</h2>
+        <button onclick="addToCart('Overwatch', 19.99, 'imagenes/Overwatch.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+
+        <p> Overwatch es un videojuego de disparos en primera persona multijugador, creado por Blizzard Entertainment en 2016. 
+            El juego se desarrolla en la Tierra en un futuro próximo. Cada encuentro es una intensa batalla de 6 contra 6 entre 
+            un elenco de héroes únicos, cada uno con poderes y habilidades increíbles. Overwatch tiene varios modos de juego para jugar."</p>
+    </div>
+    <div class="minima">
+        <h3>Configuración</h3>
+        <p><b>mínima*</b>
+            <br>Requiere un procesador y un sistema operativo de 64 bits</br>
+            <br>SO: Windows® 10 64-bit (actualizado con el último service pack)</br>
+            <br>Procesador: Intel® Core™ i3 o AMD Phenom™ X3 8650</br>
+            <br>Memoria: 6 GB de RAM</br>
+            <br>Gráficos: Serie NVIDIA® GeForce® GTX 600, serie AMD Radeon™ HD 7000</br>
+            <br>DirectX: Versión 11</br>
+            <br>Red: Conexión de banda ancha a Internet</br>
+            <br>Almacenamiento: 50 GB de espacio disponible</p></br>
+        </div>
+    <div class="recomendada">
+        <p><b>recomendada*</b>
+            <br>Requiere un procesador y un sistema operativo de 64 bits</br>
+            <br>SO *: Windows® 7 / Windows® 8 / Windows® 10 64-bit <br>(actualizado con el último service pack)</br>
+            <br>Procesador: Intel® Core™ i5 o AMD Phenom™ II X3 o superior</br>
+            <br>Memoria: 8 GB de RAM</br>
+            <br>Gráficos: NVIDIA® GeForce® GTX 1060/ GeForce® GTX 1650 o AMD R9 380/ <br>AMD RX 6400 o Intel® Arc™ A770</br>
+            <br>DirectX: Versión 11</br>
+            <br>Red: Conexión de banda ancha a Internet</br>
+            <br>Almacenamiento: 50 GB de espacio disponible</br></p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Chavo Kart - XBOX 360</title>
+    <link rel="stylesheet" href="JX360.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/CK.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>El Chavo Kart - XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$10.00 USD</h2>
+            <button onclick="addToCart('El Chavo Kart', 10.00, 'imagenes/CK.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>El Chavo Kart – La carrera más divertida ha comenzado</b> <br>
+                Prepárate para la competencia más emocionante y llena de risas con El Chavo Kart, el videojuego de carreras 
+                inspirado en la querida serie animada de El Chavo del 8. Recorre circuitos llenos de sorpresas, usa divertidos 
+                poderes y compite contra tus personajes favoritos en este título exclusivo para Xbox 360. <br>
+                
+                <br><b>Corre con tus personajes favoritos</b> <br>
+                Elige entre El Chavo, Quico, La Popis, Don Ramón, Doña Florinda, El Profesor Jirafales y muchos más. Cada 
+                personaje cuenta con su propio kart personalizado, lleno de detalles que reflejan su personalidad y estilo único.<br>
+                
+                <br><b>Carreras llenas de diversión y locura</b> <br>
+                Compite en circuitos inspirados en la vecindad y otros lugares icónicos de la serie. Utiliza atajos, esquiva 
+                obstáculos y lanza divertidos objetos para adelantar a tus rivales. ¿Podrás llegar en primer lugar sin que te 
+                lancen una torta en la cara? <br>
+                
+                <br><b>Modos de juego para todos</b> <br>
+                Carrera Rápida – Juega solo o con amigos en partidas llenas de emoción. <br>
+                
+                Torneo – Compite en una serie de carreras para convertirte en el campeón. <br>
+                
+                Multijugador local – Hasta cuatro jugadores en pantalla dividida para jugar con amigos y familia. <br>
+                
+                <br><b>Gráficos y diversión para toda la familia </b><br>
+                Con gráficos coloridos, animaciones fieles a la serie y una banda sonora que incluye la icónica música de El Chavo, 
+                este juego te hará sentir dentro del mundo de la caricatura mientras disfrutas de una experiencia de carreras 
+                accesible y entretenida para todas las edades. <br>
+                
+                <br><b>Súbete a tu kart y acelera a la diversión</b> <br>
+                Revive la magia de El Chavo con esta aventura de carreras llena de nostalgia, velocidad y muchas risas. 
+                Disponible exclusivamente en Xbox 360. <br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

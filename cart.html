@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header>
+    <h1>Carrito de Compras</h1>
+</header>
+
+<div class="cart-container">
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        <span>Total: $<span id="total-price">0.00</span></span>
+    </div>
+
+    <div class="button-container">
+        <button class="clear-button" onclick="clearCart()">Limpiar carrito</button>
+        <button class="go-to-catalog-button" onclick="goToCatalog()">Volver al catálogo</button>
+        <button class="finalize-button" onclick="openPaymentForm()">Finalizar compra</button>
+    </div>
+</div>
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePaymentForm()">&times;</span>
+        <h2>Pago con tarjeta</h2>
+        <form id="payment-form">
+            <label for="card-name">Nombre en la tarjeta:</label>
+            <input type="text" id="card-name" required>
+
+            <label for="card-number">Número de tarjeta:</label>
+            <input type="text" id="card-number" maxlength="16" required>
+
+            <label for="card-expiry">Fecha de expiración:</label>
+            <input type="text" id="card-expiry" placeholder="MM/YY" required>
+
+            <label for="card-cvv">CVV:</label>
+            <input type="text" id="card-cvv" maxlength="3" required>
+
+            <button type="button" onclick="processPayment()">Pagar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function displayCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsDiv = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    cartItemsDiv.innerHTML = '';
+
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p>El carrito está vacío.</p>';
+    } else {
+        cart.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('cart-item');
+            
+            productDiv.innerHTML = `
+                <div class="cart-item-info">
+                    <img src="${product.Image}" alt="${product.name}"> <!-- Imagen del producto -->
+                    <div>
+                        <div class="name">${product.name}</div>
+                        <div class="price">$${product.price}</div>
+                    </div>
+                </div>
+                <div class="cart-item-quantity">x ${product.quantity}</div>
+                `;
+            cartItemsDiv.appendChild(productDiv);
+            total += product.price * product.quantity;
+        });
+
+        totalPriceElement.textContent = total.toFixed(2);
+    }
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    displayCart();
+}
+
+function goToCatalog() {
+    window.location.href = 'PF.html';
+}
+
+function openPaymentForm() {
+    document.getElementById('payment-modal').style.display = 'flex';
+}
+
+function closePaymentForm() {
+    document.getElementById('payment-modal').style.display = 'none';
+}
+
+function processPayment() {
+    const name = document.getElementById('card-name').value.trim();
+    const number = document.getElementById('card-number').value.trim();
+    const expiry = document.getElementById('card-expiry').value.trim();
+    const cvv = document.getElementById('card-cvv').value.trim();
+
+    if (name === '' || number.length !== 16 || expiry === '' || cvv.length !== 3) {
+        alert('Por favor, ingrese los datos correctamente.');
+        return;
+    }
+
+    alert('Pago procesado con éxito. ¡Gracias por tu compra!');
+    closePaymentForm();
+    clearCart();
+}
+
+displayCart();
+</script>
+
+</body>
+</html>

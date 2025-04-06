@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola XBOX 360</title>
+    <link rel="stylesheet" href="PS4.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/X360.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Consola XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$150.00 USD</h2>
+            <button onclick="addToCart('XBOX 360', 150.00, 'imagenes/X360.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>Xbox 360: Vive el entretenimiento sin límites</b> <br>
+                Descubre una nueva era del entretenimiento con Xbox 360, la consola que redefine la forma en que juegas, 
+                te conectas y disfrutas de tus contenidos favoritos. Diseñada para ofrecer una experiencia de juego inmersiva y 
+                un ecosistema de entretenimiento completo, Xbox 360 te brinda gráficos impresionantes, multijugador en línea 
+                sin igual y un catálogo de juegos de primer nivel. <br>
+                
+                <br><b>Potencia y rendimiento sin compromisos</b> <br>
+                Equipada con un procesador multinúcleo de alto rendimiento y una tarjeta gráfica avanzada, Xbox 360 lleva la alta 
+                definición a tu pantalla con detalles espectaculares y una fluidez excepcional. Ya sea explorando mundos abiertos, 
+                compitiendo en intensos enfrentamientos en línea o disfrutando de emocionantes historias cinematográficas, Xbox 360 
+                te sumerge en experiencias inigualables. <br>
+                
+                <br><b>Xbox Live: Conéctate y compite</b> <br>
+                Conéctate con millones de jugadores alrededor del mundo a través de Xbox Live, el servicio en línea líder en la 
+                industria. Disfruta de partidas multijugador, accede a contenido exclusivo, descarga juegos y expande tu biblioteca 
+                con contenido adicional. Además, con logros y Gamerscore, cada partida es una nueva oportunidad para demostrar tu 
+                habilidad y alcanzar la grandeza. <br>
+                
+               <br> <b>Entretenimiento para todos</b> <br>
+                Xbox 360 no es solo una consola de videojuegos; es un centro de entretenimiento completo. Reproduce películas, 
+                series y música, accede a tus aplicaciones favoritas y disfruta de un universo de opciones desde la comodidad de 
+                tu sala. <br>
+                
+                <br><b>Innovación en movimiento con Kinect</b> <br>
+                Lleva la experiencia al siguiente nivel con Kinect, el revolucionario sensor de movimiento que te permite jugar sin 
+                controles. Con solo moverte y usar tu voz, interactúa con tus juegos y aplicaciones de manera completamente nueva. <br>
+                
+                <br><b>Un diseño para cada jugador</b> <br>
+                Desde la Xbox 360 original hasta las versiones Slim y E, la consola ha evolucionado para ofrecer un diseño más 
+                compacto, silencioso y eficiente, con opciones de almacenamiento que se adaptan a tus necesidades. <br>
+                
+                <br><b>Xbox 360: Donde los juegos y el entretenimiento cobran vida</b> <br>
+                Únete a la comunidad de Xbox y experimenta el futuro del entretenimiento con una consola diseñada para jugar más, 
+                compartir más y disfrutar más. <br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

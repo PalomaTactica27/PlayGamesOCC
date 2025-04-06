@@ -1,0 +1,220 @@
+:root{
+    --carbon-bg: #121212;
+    --red-rays: #ff0000;        
+    --ray-glow: 0 0 10px var(--red-rays); 
+}
+
+body {
+    background-color: var(--carbon-bg);
+    background-image: linear-gradient(45deg, 
+        rgba(30, 30, 30, 0.5) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(30, 30, 30, 0.5) 50%, 
+        rgba(30, 30, 30, 0.5) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 10px 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.menu{
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    z-index: 10;
+    width: 1475px;
+    height: 120px;
+    overflow: hidden;
+    border: 2px solid var(--red-stripes);
+    box-shadow: 0 0 15px var(--red-rays);
+    text-align: center;
+    background-color: black;
+    opacity: 0.75;
+}
+
+.index{
+    position: absolute;
+    top: 50px;
+    left: 580px;
+    font-size: 30px;
+}
+
+.catalogo{
+    position: absolute;
+    top: 50px;
+    left: 675px;
+    font-size: 30px;
+    
+}
+.info{
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    font-size: 30px;
+}
+.carrito{
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    font-size: 30px;
+}
+
+.todo{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.imagen {
+    margin-top: 20px;
+}
+
+.imagen img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+h3 {
+    color: #ff9800;
+}
+a{
+    color: #ab0000;
+}
+.texto {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.texto p {
+    line-height: 1.6;
+}
+
+.texto b {
+    color: #ff9800;
+    font-size: 1.2em;
+}
+
+.texto li {
+    margin: 10px 0;
+    list-style-type: square;
+    padding-left: 10px;
+}
+
+.precio {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.precio h2 {
+    color: #ff9800;
+    font-size: 2em;
+    margin: 0;
+}
+
+.boton-compra {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.boton-compra:hover {
+    background-color: #e68900;
+}
+
+.logo-container {
+    position: fixed;
+    top: 7px;
+    right: 25px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--red-stripes);
+    box-shadow: 0 0 15px var(--red-rays);
+    transition: all 0.3s ease;
+}
+
+.main-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 80px;
+}
+
+.logo-container:hover {
+    box-shadow: 0 0 25px var(--red-rays), 0 0 35px var(--red-rays);
+    transform: scale(1.05);
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--red-rays), transparent);
+    animation: shine 3s infinite;
+    z-index: 1;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 650px;
+        width: 80px;
+        height: 80px;
+    }
+    .index{
+        position: absolute;
+        left: 200px;
+    }
+    .info{
+        position: absolute;
+        left: -800px;
+    }
+    .carrito{
+        position: absolute;
+        left: -200px;
+    }
+    .catalogo{
+        position: absolute;
+        left: 300px;
+    }
+}

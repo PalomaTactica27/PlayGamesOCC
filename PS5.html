@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola PlayStation 5</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="PS4.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+    
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/PS5.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Consola PlayStation 5</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$650.00 USD</h2>
+            <button onclick="addToCart('PlayStation 5', 650.00, 'imagenes/PS5.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p> <br><b>PlayStation 5 – La nueva generación del entretenimiento</b>
+                La PlayStation 5 lleva la experiencia de los videojuegos a nuevas alturas, combinando potencia, velocidad e 
+                innovación para ofrecerte una experiencia de juego sin igual. Con un diseño futurista y características 
+                revolucionarias, la PS5 es la consola que define el futuro del entretenimiento, tanto dentro como fuera de los 
+                videojuegos. <br>
+                
+                <br><b>Potencia sin límites con la nueva arquitectura </b><br>
+                Impulsada por un procesador de 8 núcleos basado en AMD Zen 2, acompañado de una GPU personalizada RDNA 2, la PS5 
+                ofrece una potencia gráfica y de procesamiento impresionante. Disfruta de mundos más detallados, animaciones 
+                fluidas y tiempos de carga casi inexistentes gracias a su SSD ultrarrápido. Los juegos se cargan a una velocidad 
+                nunca vista, permitiéndote entrar al juego en segundos y experimentar mundos abiertos de una manera más fluida y 
+                dinámica. <br>
+                
+                <br><b>Gráficos de última generación</b> <br>
+                La PS5 soporta resolución 4K nativa y Ray Tracing para una iluminación, reflejos y sombras más realistas, lo que 
+                ofrece una calidad visual de otro nivel. Con una tasa de hasta 120 fps, los movimientos y detalles de los juegos 
+                se ven más nítidos, precisos y naturales, creando una experiencia de juego visualmente impresionante. <br>
+                
+                <br><b>Control DualSense – Siente el juego como nunca</b> <br>
+                El DualSense es un mando innovador que lleva la experiencia sensorial a nuevas dimensiones. Con su retroalimentación 
+                háptica avanzada y gatillos adaptativos, sentirás el entorno del juego a través de vibraciones detalladas y una 
+                respuesta táctil más precisa. Los gatillos adaptativos ofrecen resistencia variable, lo que te permite sentir la 
+                diferencia entre disparar un arco o un rifle en tus manos. Además, el micrófono integrado y el altavoz añaden una 
+                capa extra de inmersión al juego. <br>
+                
+                <br><b>Carga ultra rápida y casi sin esperas</b> <br>
+                Con el SSD de 825 GB, la PS5 elimina los largos tiempos de espera entre pantallas de carga, brindándote una 
+                experiencia de juego ininterrumpida. Los desarrolladores pueden aprovechar esta velocidad para crear mundos más 
+                expansivos y detallados, sin comprometer el rendimiento. <br>
+                
+                <br><b>Juegos exclusivos de alto calibre</b> <br>
+                La PS5 te trae títulos exclusivos de alto calibre como Demon's Souls, Ratchet & Clank: Rift Apart, Returnal y 
+                Spider-Man: Miles Morales, aprovechando al máximo las capacidades gráficas y el rendimiento de la consola. Además, 
+                la retrocompatibilidad con los juegos de PS4 te permite disfrutar de una vasta biblioteca de títulos. <br>
+                
+                <br><b>Entretenimiento multimedia 4K y más</b> <br>
+                Además de su increíble capacidad para los videojuegos, la PS5 también es un centro de entretenimiento integral. 
+                Puedes disfrutar de streaming en 4K, ver tus películas favoritas en Ultra HD Blu-ray o acceder a servicios de 
+                contenido como Netflix, Disney+ y Spotify para tener todo el entretenimiento a tu disposición. <br>
+                
+                <br><b>PlayStation 5 – La consola que define el futuro del entretenimiento</b> <br>
+                Con un rendimiento extraordinario, gráficos impresionantes y un control que revoluciona la forma en que 
+                interactúas con los juegos, PlayStation 5 es la consola del futuro, disponible ahora. Lleva tu experiencia de 
+                juego y entretenimiento al siguiente nivel con la potencia de la PS5. <br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

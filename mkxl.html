@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat XL</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="jwe.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/MKXL.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Mortal Kombat XL | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$39.99 USD</h2>
+        <button onclick="addToCart('Mortal Kombat XL', 39.99, 'imagenes/MKXL.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+            <h4><b>XL incluye</b></h4>
+                <p>- Mortal Kombat X </br>
+                - Kombat Pack</br>
+                - Kombat Pack 2</br></p>
+
+        <p>"¿Quién es el siguiente? Disfruta de la nueva generación de la franquicia de lucha n.º 1. Mortal Kombat X reúne un aspecto 
+            cinematográfico y una mecánica de juego nunca vistos. Por primera vez, los jugadores pueden elegir múltiples variantes de 
+            cada personaje con impacto tanto en la estrategia como en el estilo de lucha.
+
+            Bonificación de reserva: Goro, el luchador legendario."</p>
+    </div>
+    <div class="minima">
+        <h3>Configuración</h3>
+        <p><b>mínima*</b>
+            <br>OS *:   64-bit: Vista, Win 7, Win 8, Win 10 </br>
+            <br>Processor:  Intel Core i5-750, 2.67 GHz | AMD Phenom II X4 965, 3.4 GHz</br>
+            <br>Memory:     3 GB RAM</br>
+            <br>Graphics:   NVIDIA GeForce GTX 460 | AMD Radeon HD 5850</br>
+            <br>DirectX:    Version 11</br>
+            <br>Network:    Broadband Internet connection</br>
+            <br>Storage:    36 GB available space</p></br>
+        </div>
+    <div class="recomendada">
+        <p><b>recomendada*</b>
+            <br> OS *:          64-bit: Win 7, Win 8, Win 10 </br>
+            <br>Processor:      Intel Core i7-3770, 3.4 GHz | AMD FX-8350, 4.0 GHz</br>
+            <br>Memory:         8 GB RAM</br>
+            <br>Graphics:       NVIDIA GeForce GTX 660 | AMD Radeon HD 7950</br>
+            <br>DirectX:        Version 11</br>
+            <br>Network:        Broadband Internet connection</br>
+            <br>Storage:        44 GB available space</br></p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

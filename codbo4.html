@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Of Duty Black Ops 4</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="codbo4.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/CODBO4.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Call Of Duty Black Ops 4 | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2><s>$49.99 USD</s><br>$25.00 USD</h2>
+
+        <button onclick="addToCart('Call of Duty: Black Ops 4', 25.00, 'imagenes/CODBO4.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+        <p>El juego Call of Duty: Black Ops 4, que tendrá lugar en un futuro cercano, ofrece una oportunidad única de experimentar las emociones multijugador más intensas. ¡Elige una de las clases de especialistas y enfréntate a tus oponentes, y prepárate para un tiroteo masivo! <br></br>
+            <b><br>Nueva fórmula de juego</br></b>
+            La acción multijugador dinámica es el núcleo del juego de Call of Duty: Black Ops 4. Prepárate para un espectacular tiroteo en el mundo online. ¡Despierta tu espíritu de jugador de equipo y conviértete en un miembro valioso de tu grupo! ¡Sigue las órdenes de tu comandante como un escuadrón coherente! Comienza eligiendo tu especialización, eligiéndola de uno de los 10 personajes únicos.
+            
+            Echa un vistazo a los 4 nuevos, nunca antes vistos en la franquicia: Recon, Ajax, Torque y Crash. Una vez que hayas elegido a tu especialista, podrás sumergirte en las posibilidades de personalización más amplias jamás disponibles en un juego de Call of Duty. Modifica la ropa y la apariencia de tu especialista. Descubre el nuevo arsenal de armas que asolará a tus oponentes. Explora todos los diferentes mapas, incluyendo Jungla, Barrios Bajos o el famoso Nuketown. Cuando estés listo para el desafío, únete a la comunidad en línea y causa estragos entre tus enemigos. <br></br>
+            
+            <b><br>¡Extermina a los zombis sedientos de </br></b>
+            El famoso modo Zombie es una de las principales características del nuevo Call of Duty: Black Ops IV. Al ofrecer la gama más amplia de personalización hasta ahora, este modo permite un estilo de juego más personalizado. "Voyage of Despair", "IX" y "Blood of the Dead" te llevarán en un peligroso viaje a través de la cubierta del Titanic, la Antigua Roma y la Penitenciaría Federal de Alcatraz. ¡Únete al grupo de nueve intrépidos temerarios que deciden enfrentarse a la amenaza desenfrenada! <br></br>
+
+            <b><br>Disfruta de la enorme experiencia de Battle Royale </br></b>
+            ¡El Battle Royale está de vuelta! ¡Llamado Blackout, el modo ofrece el mapa más grande en la historia de Call of Duty! Explora un entorno 1500 veces más grande que el icónico Nuketown. Descubre elementos conocidos del universo de Black Ops.
+            
+            Fusionando los mundos de la subserie Black Ops, este modo de supervivencia total presenta un conjunto de armas, equipo, vehículos para varios terrenos, trampas e incluso zombis únicos en una experiencia definitiva de Black Ops.
+            
+            Toma el control de tus personajes favoritos, como Alex Mason, Raúl Menéndez y el equipo Primis de Zombies, ¡y prepárate para una experiencia emocionante! <br></br>
+            
+            <b><br>Todo esto con una calidad visual alucinante</br></b>
+            Con la compatibilidad total con 4K, los gráficos de CoD 4 Black Ops te dejarán sin aliento, elevando tu experiencia a un nivel completamente nuevo. ¡El juego utiliza el motor probado conocido de la serie anterior, mejorado hasta el límite para brindarte la mejor experiencia de juego! <br></br>
+            
+            <b>Características principales:</b>
+            <li>Robusto multijugador con una amplia variedad de modos para elegir</li>
+            <li>El modo Blackout es Battle Royale en su mejor momento, ofreciendo el mapa más grande en la historia de CoD</li>
+            <li>Innumerables posibilidades de personalización que permiten a los jugadores crear su alter ego virtual perfecto</li>
+            <li>4 nuevos especialistas para jugar además de los personajes que regresan, cada uno con un conjunto único de habilidades y características que se ofrecen</li>
+            <li>Una amplia gama de nuevas armas para comprobar</li>
+            <li>Compatibilidad nativa con 4K, lo que eleva la experiencia de juego a un nuevo nivel de fidelidad visual</li></p>
+    </div>
+</div>
+<script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

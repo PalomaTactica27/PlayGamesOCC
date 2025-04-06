@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball XenoVerse 2</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="dbxv2.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/DBXV2.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Dragon Ball XenoVerse 2 | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$19.99 USD</h2>
+        <button onclick="addToCart('Dragon Ball XenoVerse 2', 19.99, 'imagenes/DBXV2.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+
+            <br><b>TU HISTORIA, TU AVATAR Y TU MUNDO DE DRAGON BALL</b></br>
+
+            Dragon Ball Xenoverse 2 es la experiencia de juego definitiva de Dragon Ball, llena de acción trepidante, batallas épicas y un 
+            sinfín de opciones de personalización. ¡Crea tu propio personaje, explora Conton City y entrena con personajes emblemáticos de la 
+            saga como maestros para poder enfrentarte a enemigos formidables y rescatar el flujo de la historia! </br>
+
+           <br>A medida que avances en el juego, podrás personalizar el aspecto, las habilidades y el conjunto de movimientos de tu personaje para 
+            crear un guerrero realmente único y poderoso.</br>
+
+            <br>¡Pero la diversión no termina aquí! Dragon Ball Xenoverse 2 también dispone de modos multijugador online, en los que podrás medirte 
+            con jugadores de todo el mundo en enfrentamientos épicos o participar en combates de ataque contra enemigos fabulosos junto a otros 
+            jugadores.</br>
+
+            <br>¡Los siete años de paquetes de contenido descargable aseguran que siempre habrá algo nuevo que descubrir y experimentar en Conton 
+            City!</br>
+        
+            <br><b>EL GUERRERO QUE SIEMPRE HAS QUERIDO SER.</b></br>
+            La gran variedad de opciones de personalización te permitirá crear un personaje que se adapte realmente a tu estilo y personalidad. 
+            Tienes el control absoluto de tu guerrero. ¡Elige desde su raza y aspecto, hasta sus habilidades y su conjunto de movimientos!</br>
+
+            <b><br>UNA EXPERIENCIA ONLINE INFINITA.</br></b>
+            ¡Los múltiples eventos del juego y los modos multijugador online hacen que los combates nunca se detengan! 
+            Lucha contra jugadores de todo el mundo en enfrentamientos épicos o forma equipo con ellos para combatir amenazas 
+            fabulosas en los combates de ataque.</br>
+
+            <br><b>¡DEJA QUE TU ESPÍRITU DE LUCHA ARDA!</b></br>
+            Sumérgete en las batallas intensas y llenas de acción que caracterizan a Dragon Ball. ¡Siente la emoción de la lucha en 
+            enfrentamientos uno contra uno o en combates masivos contra múltiples enemigos!</br>
+
+            <br><b>El UNIVERSO DE DRAGON BALL TE ESPERA.</b></br>
+            ¡Salta a diferentes ubicaciones y líneas temporales de Dragon Ball! Combate en lugares emblemáticos del universo Dragon Ball e 
+            interactúa con personajes famosos para proteger la historia.</br>
+
+            <br><b>TODO DRAGON BALL, AQUÍ.</b></br>
+            Dragon Ball Xenoverse 2 incluye un montón de guiños para los seguidores, ¡con personajes, lugares y momentos emblemáticos 
+            de la saga que a los fans les encantará ver y experimentar en el juego!</br>
+
+            <br><b>¡SIETE AÑOS DE EXPANSIONES!</b></br>
+            ¡Dragon Ball Xenoverse 2 es más grande que nunca! Tras siete años de nuevos contenidos descargables periódicos, descubre más de 40 
+            personajes, tramas y mucho más de Dragon Ball Z, Dragon Ball Super y las películas de Dragon Ball. ¡Y no te pierdas las 
+            actualizaciones gratuitas!
+        </p>
+
+
+    </div>
+    <div class="minima">
+        <h3>Configuración</h3>
+        <p><b>mínima*</b>
+            <br>OS: Windows 10</br>
+            <br>Processor: Intel Core i5-3570 / AMD Ryzen 5 1600</br>
+            <br>Memory: 4 GB RAM</br>
+            <br>Graphics: Nvidia GeForce GTX 1030 / AMD Radeon HD 7770</br>
+            <br>DirectX: Version 11</br>
+            <br>Network: Broadband Internet connection</p></br>
+        </div>
+    <div class="recomendada">
+        <p><b>recomendada*</b>
+            <br>OS: Windows 10 / Windows 11</br>
+            <br>Processor: AMD Ryzen 3 3100 / Intel Core i5-6400</br>
+            <br>Memory: 4 GB RAM</br>
+            <br>Graphics: Nvidia GeForce 750 Ti / AMD Radeon HD 7850 / Intel Arc A380</br>
+            <br>DirectX: Version 11</br>
+            <br>Network: Broadband Internet connection</br></p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

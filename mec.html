@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror´s Edge Catalyst</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="mec.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/ME.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Mirror´s Edge Catalyst | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$19.99 USD</h2>
+        <button onclick="addToCart('Mirror´s Edge Catalyst', 19.99, 'imagenes/ME.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+
+        <p><br>LAS FUNCIONES ONLINE DE ESTE TÍTULO SE HAN INTERRUMPIDO.</br>
+
+            Acompaña a Faith, una valiente corredora, mientras lucha por la libertad en la ciudad de Glass. 
+            A simple vista parece una ciudad elegante y a la última en tecnología, pero esconde un terrible secreto en su interior. 
+            Explora todos los rincones de la ciudad, desde los tejados con la iluminación más hermosa hasta los túneles más oscuros y subterráneos. 
+            La ciudad es enorme, se puede recorrer libremente y Faith está en el centro. Desde la perspectiva en primera persona, combinarás sus 
+            ágiles movimientos y sus técnicas avanzadas de combate por los alrededores de la ciudad para imponerte al entorno y descubrir la 
+            conspiración."</br>
+        
+            <br><b>MOVIMIENTO</b></br>
+            Alcanza rápidamente la máxima velocidad lanzándote en tirolina por líneas de cable. Mantente en equilibrio en las tuberías antes de 
+            dejarte caer suavemente para agarrarte de un saliente. Después desplázate por debajo de un obstáculo con las manos. Corre en vertical 
+            y en horizontal por cualquier pared y utiliza el entorno para cruzar vacíos o girar en las esquinas.</br>
+
+            <b><br>CONCENTRACIÓN</br></b>
+            Rápida, ligera y ágil, Faith debe mantenerse concentrada y utilizar su movimiento para sobrevivir. 
+            Ganas concentración al correr libremente y, cuando tienes concentración, los enemigos no pueden alcanzar a Faith. 
+            La concentración se pierde al moverte lento o cuando te atacan, así que es fundamental mantener un equilibrio entre
+            escapar de los enemigos y enfrentarte directamente a ellos.</br>
+
+            <br><b>ÍMPETU</b></br>
+            Genera inercia para realizar saltos arriesgados entre azoteas o deslizamientos llenos de estilo a través de lugares estrechos. 
+            Usa el nuevo movimiento de Impulso y consigue un breve esprint en cualquier dirección. Para un cambio de planes rápido, afina 
+            cualquier movimiento con Giro rápido para dar una vuelta de 180 o 90 grados.</br>
+
+            <br><b>COMBATE</b></br>
+            Realiza increíbles ataques potentes en movimiento que lancen a tus enemigos contra las paredes, barandillas o unos contra otros 
+            para desequilibrarlos. Usa tu inercia para abrirte paso entre los agentes de KrugerSec mientras combinas ataques rápidos en 
+            movimiento, ganas concentración y mantienes la velocidad. Supera a tus oponentes impulsándote detrás de ellos para atacarles 
+            con una patada por la espalda. O también puedes aturdirles con varios puñetazos rápidos antes de escapar con un impulso para 
+            evitar sus contraataques.</br>
+
+            <br><b>COMBATE</b></br>
+            Las habilidades de runner de Faith, su conocimiento de artes marciales y su determinación se expanden con algunas piezas de 
+            equipo para recorrer la ciudad y luchar contra la opresión que asfixia a la población de Glass.</br>
+
+            <br><b>CARRERAS Y PRUEBAS DE TIEMPO</b></br>
+            ¿Serás la runner más rápida de la ciudad de Glass? Crea tus propias pruebas de tiempo y compártelas con tus amistades. También puedes enfrentarte a las desafiantes carreras diseñadas por DICE y tratar de encontrar la ruta óptima usando tus movimientos fluidos. Si quieres disfrutar de una emocionante búsqueda del tesoro en la ciudad, coloca una baliza de ubicación de Beat en un punto difícil de alcanzar para ver si tus amistades son capaces de encontrarla.
+        </p>
+
+
+    </div>
+    <div class="minima">
+        <h3>Configuración</h3>
+        <p><b>mínima*</b>
+            <br>OS *: Windows 7 64-Bit</br>
+            <br>Processor: Intel i3-3250 / AMD FX-6350.</br>
+            <br>Memory: 6 GB RAM</br>
+            <br>Graphics: NVIDIA GeForce GTX 650 Ti 2GB or better / <br>AMD Radeon R9 270x or better</br>
+            <br>Storage: 25 GB available space</p></br>
+        </div>
+    <div class="recomendada">
+        <p><b>recomendada*</b>
+            <br>OS:Windows 10 64-Bit</br>
+            <br>Processor: Intel Core i7-3770 at 3.4 GHz / <br>AMD FX-8350 at 4.0 GHz</br>
+            <br>Memory: 16 GB RAM</br>
+            <br>Graphics: NVIDIA GeForce GTX 970 4GB or better / <br>AMD Radeon R9 280x 3GB or better</br>
+            <br>Storage: 25 GB available space</br></p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

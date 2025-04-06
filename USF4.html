@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Street Fighter IV - XBOX 360</title>
+    <link rel="stylesheet" href="JX360.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/USF4.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Ultra Street Fighter IV - XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$20.00 USD</h2>
+            <button onclick="addToCart('Ultra Street Fighter IV', 20.00, 'imagenes/USF4.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>Ultra Street Fighter IV – La batalla definitiva comienza aquí </b><br>
+                La legendaria saga de peleas regresa con Ultra Street Fighter IV, la edición definitiva del clásico de lucha que ha 
+                definido el género. Con un elenco ampliado, nuevos movimientos, mecánicas mejoradas y un equilibrio optimizado, 
+                esta versión lleva la experiencia de Street Fighter IV a un nuevo nivel. Disponible para Xbox 360, es el título 
+                imprescindible para los verdaderos fanáticos de la lucha. <br>
+                
+                <br><b>Nuevos personajes y más opciones de combate </b><br>
+                El roster crece hasta 44 luchadores, incluyendo cinco nuevos personajes: Poison, Hugo, Elena, Rolento y Decapre. 
+                Cada peleador cuenta con un estilo único, ampliando las estrategias y opciones de combate. <br>
+                
+                <br><b>Mecánicas mejoradas para una experiencia más profunda </b><br>
+                Red Focus Attack – Absorbe múltiples golpes y cambia el ritmo de la pelea. <br>
+                
+                Ultra Combo Double – Accede a ambos Ultra Combos de tu personaje en una sola partida. <br>
+                
+                Delayed Wakeup – Introduce una nueva táctica defensiva para cambiar el flujo del combate. <br>
+                
+                Equilibrio mejorado – Ajustes en todos los personajes para un sistema de lucha más justo y competitivo. <br>
+                
+                <br><b>Modos de juego y multijugador competitivo </b><br>
+                Arcade Mode – Enfréntate a una serie de combates en solitario hasta llegar al jefe final. <br>
+                
+                Online Multiplayer – Compite contra jugadores de todo el mundo en partidas igualadas o casuales. <br>
+                
+                Training Mode – Perfecciona combos y estrategias con opciones avanzadas de entrenamiento. <br>
+                
+                Challenge Mode – Demuestra tu habilidad con pruebas diseñadas para cada personaje. <br>
+                
+                <br><b>Gráficos y jugabilidad optimizados </b><br>
+                Con un estilo visual inspirado en el arte japonés y una fluidez de 60 cuadros por segundo, Ultra Street Fighter IV 
+                ofrece una experiencia de lucha intensa y espectacular. Cada golpe, combo y movimiento especial se siente preciso y 
+                dinámico. <br>
+                
+                <br><b>Domina la lucha y conviértete en el campeón </b><br>
+                Ya seas un veterano de la saga o un nuevo competidor, Ultra Street Fighter IV en Xbox 360 te ofrece la mejor versión 
+                del clásico moderno de la lucha. Es hora de subir al ring y demostrar tu poder. <br>                
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

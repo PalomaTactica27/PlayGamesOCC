@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola PlayStation 4</title>
+    <link rel="stylesheet" href="PS4.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/PS4.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Consola PlayStation 4</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$400.00 USD</h2>
+            <button onclick="addToCart('PlayStation 4', 400.00, 'imagenes/PS4.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>PlayStation 4 – La nueva era del entretenimiento </b><br>
+                La PlayStation 4 redefine el futuro de los videojuegos, combinando potencia, innovación y una experiencia inmersiva 
+                como nunca antes. Con un diseño elegante y moderno, esta consola es el centro de tu entretenimiento, permitiéndote 
+                jugar, conectarte y disfrutar de contenido multimedia con un rendimiento impresionante. <br>
+                
+                <br><b>Potencia y rendimiento inigualables</b> <br>
+                Equipada con un procesador de ocho núcleos y una tarjeta gráfica avanzada, la PS4 ofrece gráficos de alta definición, 
+                fluidos y detallados, que permiten a los desarrolladores crear mundos de juego más grandes, dinámicos y realistas. 
+                Experimenta texturas, iluminación y efectos visuales nunca antes vistos en una consola, todo con una tasa de 60 fps 
+                para un rendimiento impecable. <br>
+                
+                <br><b>Control inalámbrico revolucionario</b> <br>
+                El DualShock 4 se ha diseñado para ofrecer una experiencia de juego más cómoda y precisa. Con un panel táctil, 
+                altavoces incorporados, botones de acción mejorados y un nuevo sistema de vibración más dinámico, el mando te 
+                pone al control total. Además, el Light Bar te permite una retroalimentación visual en tiempo real para una 
+                experiencia aún más inmersiva. <br>
+                
+                <br><b>Nuevas formas de jugar y compartir</b> <br>
+                La PS4 ofrece una nueva interfaz que hace que el acceso a tus juegos, aplicaciones y contenidos sea rápido y sencillo. 
+                Gracias a la función de compartir, puedes grabar tus partidas y transmitirlas en vivo, o compartir tus logros con 
+                tus amigos en las redes sociales. Además, el Remote Play te permite jugar tus juegos en cualquier lugar de tu hogar 
+                utilizando un dispositivo móvil o una PS Vita. <br>
+                
+                <br><b>Juegos exclusivos de alta calidad</b> <br>
+                Con un catálogo exclusivo de juegos de altísima calidad, PlayStation 4 ofrece títulos como The Last of Us Part II,
+                 God of War, Horizon Zero Dawn, Spider-Man y muchos más. Estos títulos no solo aprovechan al máximo la potencia de 
+                 la consola, sino que también ofrecen historias y mundos de juego innovadores. <br>
+                
+                <br><b>Entretenimiento sin límites</b> <br>
+                La PS4 también es un centro de entretenimiento completo. Accede a tus aplicaciones favoritas como Netflix, YouTube, 
+                Spotify, y mucho más. Con la posibilidad de reproducir contenido en 4K (mediante un dispositivo compatible) y 
+                soporte para Blu-ray, podrás disfrutar de tus películas, series y música con calidad superior. <br>
+                
+                <br><b>PlayStation 4 – El futuro del entretenimiento está aquí </b><br>
+                Con una potencia sin igual, un control intuitivo y una oferta de juegos de calidad inmejorable, la PS4 lleva tu 
+                experiencia de entretenimiento a un nivel completamente nuevo. Descubre el futuro del juego y más con PlayStation 4.<br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

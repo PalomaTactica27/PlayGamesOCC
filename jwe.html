@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic World Evolution</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="jwe.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/JWE.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Jurassic World Evolution | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$49.99 USD</h2>
+        <button onclick="addToCart('Jurassic World Evolution', 49.99, 'imagenes/JWE.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+        <p><br>Encárgate de las operaciones en las islas del legendario archipiélago de las Muertes y convierte en realidad el milagro, el esplendor y el peligro de los dinosaurios. Construye instalaciones de ciencia, entretenimiento y seguridad en un mundo incierto donde la vida siempre se abre camino. </br>
+
+            <br>Crea mediante bioingeniería dinosaurios que piensan y reaccionan ante su entorno. Juega con la vida para darles comportamientos, rasgos y apariencias diferentes. Mantenlos bajo control y obtén beneficios para financiar una investigación del ADN de especies perdidas. </br>
+            
+            <br>Gestiónalo todo con completas herramientas o enfréntate directamente a los desafíos por tierra y aire. Amplía tus islas y toma decisiones en una historia nueva en la que intervienen personajes emblemáticos de las películas y que pone décadas de conocimientos sobre el Jurásico en tus manos. </br>
+            </p>
+    </div>
+    <div class="minima">
+        <h3>Configuración</h3>
+        <p><b>mínima*</b>
+            <br> OS *:          Windows 7 (SP1+)/8.1/10 64bit </br>
+            <br> Processor:     Intel i5-2300/AMD FX-4300 <br>
+                 Memory:        8 GB RAM <br>
+            <br> Graphics:      NVIDIA GeForce GTX 1050 (Legacy GPU: GeForce GTX 660) / AMD <br>Radeon 7850 (2GB) </br>
+            <br> DirectX:       Version 11 </br>
+            <br> Storage:       8 GB available space </br></p>
+        </div>
+    <div class="recomendada">
+        <p><b>recomendada*</b>
+            <br> OS *:          Windows 7 (SP1+) / 8.1/10 64bit </br>
+            <br> Pocessor:      Intel i7-4770/AMD FX-8350 </br>
+            <br> Memory:        12 GB RAM <br>
+            <br> Graphics:      NVIDIA GeForce GTX 1060 / AMD RX 480 </br>
+            <br> DirectX:       Version 11 </br>
+            <br> Storage:       12 GB available space </br></p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>

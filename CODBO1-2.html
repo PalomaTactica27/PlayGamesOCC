@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Call Of Duty Black Ops 1 y 2 - XBOX 360</title>
+    <link rel="stylesheet" href="JX360.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/CODBO1-2.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Combo Call Of Duty Black Ops 1 y 2 - XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$50.00 USD</h2>
+            <button onclick="addToCart('Combo Call Of Duty Black Ops 1 y 2', 50.00, 'imagenes/CODBO1-2.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>Call of Duty: Black Ops 1 & 2 – La guerra secreta nunca termina </b><br>
+                Sumérgete en dos de las experiencias de combate más intensas con Call of Duty: Black Ops y Call of Duty: Black Ops II, juntos en un increíble paquete para Xbox 360. Descubre una historia llena de conspiraciones, operaciones encubiertas y acción sin descanso en estos títulos aclamados que redefinieron el género FPS.
+                
+                <br><b>Call of Duty: Black Ops – La guerra en las sombras </b><br>
+                Viaja a la era de la Guerra Fría y experimenta una historia llena de giros inesperados mientras sigues los pasos de 
+                Alex Mason y su lucha contra enemigos invisibles en operaciones secretas. Desde los densos bosques de Vietnam hasta 
+                bases soviéticas ocultas, cada misión te sumerge en un conflicto global donde solo los mejores sobreviven. <br>
+                
+                <br><b>Características clave:</b> <br>
+                <br>Campaña intensa con narrativa cinematográfica <br>
+                <br>Multijugador revolucionario con mapas icónicos como Nuketown <br>
+                <br>Modo Zombies con la legendaria experiencia cooperativa <br>
+                
+                <br><b>Call of Duty: Black Ops II – El futuro del combate </b><br>
+                Lleva la guerra al siguiente nivel con Black Ops II, donde el conflicto se traslada al futuro cercano del año 2025. 
+                Con tecnología avanzada, drones de combate y decisiones que alteran la historia, cada batalla es única. Enfréntate 
+                a un nuevo enemigo global y desentraña una historia que conecta el pasado con el futuro. <br>
+                
+                <br><b>Características clave: </b><br>
+                <br>Campaña con finales múltiples y decisiones que impactan la historia <br>
+                <br>Multijugador dinámico con nuevas armas y personalización avanzada <br>
+                <br>Modo Zombies expandido con más mapas, historia y desafíos <br>
+                
+                <br><b>Domina el campo de batalla en Xbox 360 </b><br>
+                Ya sea en la intensa campaña, en frenéticas batallas multijugador o sobreviviendo a hordas de zombis, Call of Duty: 
+                Black Ops 1 & 2 te ofrecen la mejor experiencia de guerra moderna y futurista en un solo paquete. <br>
+                
+                <br>Prepárate para la acción. La misión comienza ahora. Exclusivo en Xbox 360.<br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

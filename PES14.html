@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PES 2014 - XBOX 360</title>
+    <link rel="stylesheet" href="JX360.css">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="imagenes/PES14.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>PES 2014 - XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$20.00 USD</h2>
+            <button onclick="addToCart('PES 2014', 20.00, 'imagenes/PES14.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>PES 2014 – La Evolución del Fútbol</b><br>
+                Experimenta el fútbol como nunca antes con PES 2014, el título que redefine la jugabilidad y la autenticidad en 
+                la simulación deportiva. Gracias al potente Fox Engine, esta entrega ofrece animaciones más fluidas, físicas 
+                mejoradas y un realismo sin precedentes en cada partido. Disponible para Xbox 360, PES 2014 es el juego perfecto 
+                para los verdaderos amantes del fútbol. <br>
+                
+                <br><b>Un motor gráfico revolucionario</b><br>
+                Por primera vez en la saga, PES 2014 utiliza el Fox Engine, proporcionando gráficos más detallados, movimientos 
+                naturales y una inteligencia artificial avanzada que mejora la respuesta de los jugadores en el campo. <br>
+                
+                <br><b>Jugabilidad mejorada para un control total</b><br>
+                TrueBall Tech – Nuevo sistema de control que permite un manejo del balón más preciso y realista. <br>
+                M.A.S.S. (Motion Animation Stability System) – Física de colisiones mejorada que ofrece choques y disputas de balón 
+                más naturales. <br>
+                Heart System – La moral y el estado anímico de los jugadores afectan su rendimiento en el partido. <br>
+                Team Play – IA mejorada que permite crear jugadas colectivas más fluidas y estratégicas. <br>
+                
+                <br><b>Modos de juego para todos los estilos</b><br>
+                Liga Master – Administra tu equipo, ficha jugadores y llévalo a la gloria. <br>
+                Ser una Leyenda – Vive la carrera de un jugador desde sus inicios hasta convertirse en una estrella. <br>
+                Torneos Oficiales – Juega la UEFA Champions League, Copa Libertadores y otras competiciones internacionales con 
+                licencias oficiales. <br>                
+                Multijugador en línea y local – Compite contra jugadores de todo el mundo o desafía a tus amigos en partidas 
+                locales. <br>
+                
+                <br><b>Una experiencia auténtica de fútbol</b><br>
+                Con animaciones renovadas, físicas mejoradas y un control más preciso, PES 2014 ofrece una sensación de juego 
+                más realista y envolvente, capturando la emoción de cada pase, regate y disparo al arco. <br>
+                
+                <br><b>La esencia del fútbol está en PES 2014</b><br>
+                Lleva a tu equipo a la victoria y disfruta de la evolución del fútbol en PES 2014 para Xbox 360. <br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

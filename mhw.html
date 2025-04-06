@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter World</title>
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="mhw.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="imagenes/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+    <div class="imagen">
+        <img src="imagenes/MH.jpg" width="150" height="200">
+    </div>
+    <div>
+        <h2>Monster Hunter World | PlayStation 4</h2>
+    </div>
+
+    <div class="precio">
+        <h2>$29.99 USD</h2>
+        <button onclick="addToCart('Monster Hunter World', 29.99, 'imagenes/MH.jpg')" class="boton-compra">Agregar al carrito</button>
+    </div>
+
+    <div class="texto">
+        <h3><b>Descripción</b></h3>
+        <p>¡Bienvenidos a un nuevo mundo! Conviértete en un gran cazador y acaba con feroces monstruos en un ecosistema lleno de vida donde 
+            podrás aprovechar tu entorno y su variada flora y fauna para vencer. ¡Caza solo o en cooperativo con hasta tres jugadores más y usa 
+            los materiales abandonados por tus enemigos caídos para crear nuevo equipo con que luchar con bestias aún más grandes y poderosas!</p>
+
+        <h3><b>INTRODUCCIÓN</b></h3>
+        <h4><b>PRESENTACIÓN</b></h4>
+        <p>Combate contra monstruos gigantescos en escenarios épicos.
+
+            Tu tarea es aceptar misiones de caza de monstruos en una gran variedad de hábitats. 
+            Abátelos y recibe materiales que podrás utilizar para crear armas y armaduras más poderosas con las que enfrentarte a monstruos aún 
+            más peligrosos.
+            
+            Monster Hunter: World es la última entrega de la serie. 
+            <br>En ella podrás disfrutar de la mejor experiencia de juego, utilizando todos los recursos a tu alcance para acechar monstruos en un 
+            nuevo mundo rebosante de emociones y sorpresas.</br></p>
+
+        <p><b>HISTORIA</b></br>
+            Cada década, los dragones ancianos cruzan el mar hasta el continente conocido como el Nuevo Mundo, en un fenómeno conocido como la migración de los Ancianos.
+
+            >Para llegar hasta el fondo de este fenómeno misterioso, el gremio ha creado la comisión de investigación y la ha enviado en grandes flotas hacia el Nuevo Mundo.
+
+            Ha llegado el momento de que la 5.ª flota zarpe siguiendo a Zorah Magdaros, un dragón anciano de proporciones gigantescas.
+            <br>En dicha flota, un cazador está a punto de embarcarse en el viaje más grande que jamás haya podido imaginar.</br>
+
+            <br><b>ECOSISTEMA</b></br>
+            Un mundo lleno de vida
+            Hay multitud de zonas con ecosistemas rebosantes de vida.
+            <br>Las expediciones en dichos lugares tienen casi garantizado hacer descubrimientos asombrosos.</br>
+
+            <br><b>LA CAZA</b></br>
+            Un arsenal completo de equipo, y un compañero en quien confiar.
+            <br>Tu equipamiento te dará el poder necesario para labrarte tu propio lugar en el Nuevo Mundo.</br>
+
+            <br>Tu arsenal de cazador</br>
+            Hay catorce armas distintas disponibles para todo cazador, cada una con sus ataques y características particulares.
+            Muchos jugadores llegan a dominar varios tipos, mientras que algunos prefieren especializarse en uno solo.</br>
+
+            <br><b>Lafarillos</b></br>
+            En cada escenario puedes encontrar multitud de rastros de monstruos, como huellas o marcas de garras.
+            Tus Lafarillos pueden percibir el olor de cada monstruo y guiarte hasta otros rastros cercanos.
+            A medida que consigas encontrar más rastros, los Lafarillos te darán aún más información.</br>
+
+            <br><b>Eslinga</b></br>
+            La eslinga es una herramienta fundamental para cualquier cazador, ya que te permite armarte con las piedras y nueces
+            que abundan en cualquier escenario. Además, la versatilidad de la eslinga te permite hacer maniobras de distracción
+            como crear atajos, lo que te permitirá cazar de nuevas e interesantes formas.</br>
+
+            <br><b>Herramientas especializadas</b></br>
+            Las herramientas especializadas activan efectos muy poderosos durante un periodo de tiempo limitado.
+            Puedes equiparte con hasta dos a la vez, y utilizarlas es sencillo: solo tienes que seleccionarlas
+            y activarlas como cualquier otro de los objetos que utilizas en tus cacerías.</br>
+           
+           <br><b>Camaradas</b></br>
+            Los camaradas son los compañeros más fieles que cualquier cazador puede tener sobre el terreno,
+            y pueden especializarse en un buen número de habilidades de apoyo ofensivas, defensivas y restaurativas. </br>
+            El camarada de nuestro protagonista está muy orgulloso de formar parte de la 5.ª flota,
+            y es un miembro de la comisión tan valioso como cualquier cazador.</p>
+    </div>
+  </div>
+  <script>
+    function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+    
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+    
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    </script>
+</body>
+</html>
