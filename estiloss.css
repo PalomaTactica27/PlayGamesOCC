@@ -299,7 +299,7 @@ h3{
 
 @keyframes fall {
     from {
-        transform: translateY(-1000px) translateX(0) rotate(45deg);
+        transform: translateY(-700px) translateX(0) rotate(45deg);
         opacity: 1;
     }
     to {
