@@ -656,7 +656,7 @@ h3{
 /* Imagen del slide (lado izquierdo) */
 .slide-image {
     flex: 1;
-    max-width: 60%;
+    max-width: 30%;
     height: 100%;
     overflow: hidden;
     border-right: 2px solid var(--red-stripes);
@@ -818,7 +818,7 @@ h3{
 /* Imagen del slide (lado izquierdo) */
 .slide-image1 {
     flex: 1;
-    max-width: 60%;
+    max-width: 30%;
     height: 100%;
     overflow: hidden;
     border-right: 2px solid var(--red-stripes);
