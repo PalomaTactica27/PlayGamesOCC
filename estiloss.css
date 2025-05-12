@@ -323,7 +323,7 @@ footer.social-links {
     left: 0;
     width: 100%;
     z-index: 9999;
-    background-color: #121212;
+    background-color: rgb(35, 33, 33);
     padding: 10px;
     text-align: center;
 }

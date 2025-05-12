@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de XBOX 360</title>
+    <link rel="stylesheet" href="C1PS4.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="index">
+            <a href="Index.html">Inicio</a>
+        </div>
+        <div class="info">
+            <a href="info.html">Información</a>
+        </div>
+        <div class="catalogo">
+            <a href="PF.html">Catálogo</a>
+        </div>
+        <div class="carrito">
+            <a href="cart.html">Ir al carrito</a>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo">
+    </div>
+
+    <div class="todo">
+
+        <div class="imagen">
+            <img src="CX360.jpg" width="200" height="200">
+        </div>
+        <div>
+            <h2>Control de XBOX 360</h2>
+        </div>
+    
+        <div class="precio">
+            <h2>$20.00 USD</h2>
+            <button onclick="addToCart('Control de XBOX 360', 20.00, 'CX360.jpg')" class="boton-compra">Agregar al carrito</button>
+        </div>
+    
+        <div class="texto">
+            <h3><b>Descripción</b></h3>
+            <p><b>Mando Xbox 360: Precisión, comodidad y control total</b> <br>
+                Experimenta el juego como nunca antes con el mando Xbox 360, diseñado para ofrecer precisión, comodidad y un 
+                control intuitivo en cada partida. Con una ergonomía avanzada, una disposición de botones optimizada y tecnología 
+                inalámbrica innovadora, este mando te pone en el centro de la acción. <br>
+                
+                <br><b>Diseño ergonómico para largas sesiones de juego </b><br>
+                Cada detalle del mando Xbox 360 ha sido diseñado pensando en la comodidad. Su forma contorneada se adapta 
+                perfectamente a tus manos, mientras que la disposición de los botones y los gatillos ofrecen un acceso rápido y 
+                natural a cada función. <br>
+                
+                <br><b>Precisión y respuesta instantánea </b><br>
+                Con sticks analógicos sensibles, un D-pad optimizado y gatillos con respuesta precisa, el mando Xbox 360 te permite 
+                ejecutar cada movimiento con la máxima exactitud. Ya sea en intensos combates, carreras a alta velocidad o aventuras 
+                épicas, sentirás el control total en cada momento. <br>
+                
+                <br><b>Libertad inalámbrica con tecnología avanzada</b> <br>
+                Gracias a la conectividad inalámbrica de 2.4 GHz, el mando Xbox 360 Wireless ofrece una experiencia sin cables con un 
+                alcance de hasta 9 metros, permitiéndote jugar con total libertad. Además, con la batería recargable opcional y el 
+                Kit Carga & Juega, nunca te quedarás sin energía en medio de la acción. <br>
+                
+                <br><b>Compatibilidad y versatilidad</b> <br>
+                El mando Xbox 360 no solo es perfecto para la consola, sino que también es compatible con Windows, brindando una 
+                experiencia de juego excepcional en PC. Juega en tu plataforma favorita con la misma calidad y precisión. <br>
+                
+                <br><b>Mando Xbox 360: Juega sin límites, domina cada partida</b> <br>
+                Diseñado para jugadores, creado para la victoria. Descubre la diferencia con el mando Xbox 360 y lleva tu experiencia 
+                de juego al siguiente nivel. <br>
+            </p>
+            </div>
+    </div>
+    <script>
+        function addToCart(productName, productPrice, productImage) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        alert("Se ha agregado el producto " + productName + " al carrito con éxito");
+    
+        const product = {
+            name: productName,
+            price: productPrice,
+            quantity: 1, 
+            Image: productImage
+        };
+        
+            // Verificar si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+        
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        </script>
+</body>
+</html>

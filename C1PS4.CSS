@@ -54,6 +54,12 @@ body {
     font-size: 30px;
     
 }
+.info{
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    font-size: 30px;
+}
 .carrito{
     position: absolute;
     top: 50px;
@@ -61,16 +67,10 @@ body {
     font-size: 30px;
 }
 
-.info{
-    position: absolute;
-    top: 50px;
-    right: 500px;
-    font-size: 30px;
-}
-
 .todo{
     position: absolute;
     top: 150px;
+    left: 100px;
 }
 
 .imagen {
@@ -85,7 +85,9 @@ body {
 h3 {
     color: #ff9800;
 }
-
+a{
+    color: #ab0000;
+}
 .texto {
     width: 80%;
     margin: 20px auto;
@@ -138,41 +140,7 @@ h3 {
 }
 
 .boton-compra:hover {
-    background-color: #ff9800;
-}
-
-.configuracion-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px auto;
-    width: 80%;
-}
-
-.configuracion {
-    flex: 1;
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    text-align: left;
-}
-.minima{
-    position: absolute;
-    top: 1680px;
-    left: 130px;
-    flex: 1;
-    text-align: left;
-    width: 80%;
-    margin: 20px auto;
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.configuracion p {
-    line-height: 1.6;
+    background-color: #e68900;
 }
 
 .logo-container {
@@ -249,8 +217,4 @@ h3 {
         position: absolute;
         left: 300px;
     }
-}
-
-a{
-    color: #ab0000;
 }
