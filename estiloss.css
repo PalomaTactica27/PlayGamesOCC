@@ -317,7 +317,6 @@ h3{
         opacity: 0;
     }
 }
-}
 footer.social-links {
     position: fixed;
     bottom: 0;
@@ -372,7 +371,6 @@ footer.social-links {
     align-items: center;
     z-index: 9999;
 }
-
 
 .modal-content {
     background: #222;
