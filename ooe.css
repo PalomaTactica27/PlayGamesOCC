@@ -162,7 +162,7 @@ h3 {
 }
 .minima{
     position: absolute;
-    top: 625px;
+    top: 725px;
     left: 130px;
     flex: 1;
     text-align: left;
@@ -178,7 +178,7 @@ h3 {
     width: 80%;
     margin: 20px auto;
     position: absolute;
-    top: 650px;
+    top: 750px;
     right: 150px;
 }
 
