@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
-    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
     <link rel="stylesheet" href="cart.css">
+    <!-- ✅ EmailJS: Cargar librería -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('zKaY3-5loEedVnbPy'); // 🔁 REEMPLAZA 'TU_PUBLIC_KEY' por tu clave pública de EmailJS
+    </script>
+  
 </head>
 <body>
 
@@ -101,19 +107,37 @@ function closePaymentForm() {
 }
 
 function processPayment() {
-    const name = document.getElementById('card-name').value.trim();
-    const number = document.getElementById('card-number').value.trim();
-    const expiry = document.getElementById('card-expiry').value.trim();
-    const cvv = document.getElementById('card-cvv').value.trim();
+    const usuarioNombre = localStorage.getItem("usuario_nombre") || "Cliente";
+    const usuarioEmail = localStorage.getItem("usuario_email") || "correo@desconocido.com";
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const total = document.getElementById('total-price').textContent;
 
-    if (name === '' || number.length !== 16 || expiry === '' || cvv.length !== 3) {
-        alert('Por favor, ingrese los datos correctamente.');
-        return;
+    // Reemplazar los datos del carrito con la estructura que se espera
+    const cartItems = cart.map(product => ({
+        name: product.name,
+        quantity: product.quantity,
+        price: product.price
+    }));
+
+    const emailParams = {
+        user_name: usuarioNombre,
+        user_email: usuarioEmail,
+        cart_items: cartItems,
+        total_price: total
+    };
+
+    // Enviar el correo con EmailJS
+    emailjs.send('service_h8zx5pt', 'template_oz7b5kk', emailParams)
+        .then(() => {
+            alert('Pago procesado y correo enviado. ¡Gracias por tu compra!');
+            closePaymentForm();
+            clearCart();
+        })
+        .catch(error => {
+            console.error('Error al enviar el correo:', error);
+            alert('Pago realizado, pero hubo un problema al enviar el correo.');
+        });
     }
-
-    alert('Pago procesado con éxito. ¡Gracias por tu compra!');
-    closePaymentForm();
-    clearCart();
 }
 
 displayCart();
