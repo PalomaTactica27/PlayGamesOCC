@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayGames</title>
-    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" type="image/png" href="imagenes/logo.jpg">
     <link rel="stylesheet" type="text/css" href="estiloss.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <center><h3>Juega más, paga menos</h3></center>
 
     <div class="logo-container">
-        <img src="logo.jpg" alt="Logo">
+        <img src="imagenes/logo.jpg" alt="Logo">
     </div>
 
     <div class="storm-container">
@@ -43,7 +43,7 @@
               <div class="slide-content">
                 <div class="slide-image">
                     <a href="codbo4.html" class="glow-button">
-                  <img src="CODBO4.jpg">
+                  <img src="imagenes/CODBO4.jpg">
                 </div>
                 <div class="slide-description">
                   <h3>Call of Duty: Black Ops 4 - PS4</h3><br>
@@ -57,7 +57,7 @@
               <div class="slide-content">
                 <div class="slide-image">
                     <a href="gta5.html" class="glow-button">
-                  <img src="GTAV.jpg">
+                  <img src="imagenes/GTAV.jpg">
                 </div>
                 <div class="slide-description">
                   <h3>Grand Thief Auto 5 - PS4</h3><br>
@@ -71,7 +71,7 @@
               <div class="slide-content">
                 <div class="slide-image">
                     <a href="ark.html" class="glow-button">
-                  <img src="ARKSE.jpg">
+                  <img src="imagenes/ARKSE.jpg">
                 </div>
                 <div class="slide-description">
                   <h3> ARK Survival Evloved - PS4</h3><br>
@@ -86,7 +86,7 @@
             <div class="slide-content">
               <div class="slide-image">
                 <a href="mkxl.html" class="glow-button">
-                <img src="MKXL.jpg" alt="Coleccionables">
+                <img src="imagenes/MKXL.jpg" alt="Coleccionables">
               </div>
               <div class="slide-description">
                 <h3> Mortal Kombat XL - PS4</h3><br>
@@ -114,7 +114,7 @@
           <div class="slide-content1">
             <div class="slide-image1">
                 <a href="gta5.html" class="glow-button1">
-              <img src="GTAV.jpg">
+              <img src="imagenes/GTAV.jpg">
             </div>
             <div class="slide-description1">
                 <h3>Grand Thief Auto 5 - PS4</h3><br>
@@ -128,7 +128,7 @@
           <div class="slide-content1">
             <div class="slide-image1">
                 <a href="codbo4.html" class="glow-button1">
-              <img src="CODBO4.jpg">
+              <img src="imagenes/CODBO4.jpg">
             </div>
             <div class="slide-description1">
                 <h3>Call of Duty: Black Ops 4 - PS4</h3><br>
@@ -142,7 +142,7 @@
           <div class="slide-content1">
             <div class="slide-image1">
                 <a href="jwe.html" class="glow-button1">
-              <img src="JWE.jpg">
+              <img src="imagenes/JWE.jpg">
             </div>
             <div class="slide-description1">
               <h3> Jurassic World Evolution - PS4</h3><br>
@@ -260,13 +260,13 @@
 
     <footer class="social-links">
         <a href="https://www.facebook.com/profile.php?id=61574633143240" target="_blank" class="social-icon">
-            <img src="facebook-icon.png" alt="Facebook">
+            <img src="C:\Users\AlexB\Downloads/facebook-icon.png" alt="Facebook">
         </a>
         <a href="https://x.com/PlayGamesOCC" target="_blank" class="social-icon">
-            <img src="x-icon.png" alt="Twitter">
+            <img src="C:\Users\AlexB\Downloads/x-icon.png" alt="Twitter">
         </a>
         <a href="https://www.instagram.com/playgamesocc/" target="_blank" class="social-icon">
-            <img src="Instagram-icon.png" alt="Instagram">
+            <img src="C:\Users\AlexB\Downloads/Instagram-icon.png" alt="Instagram">
         </a>
 
         <div class="auth-buttons">
@@ -293,12 +293,33 @@
             <span class="close" onclick="closeModal('registerModal')">&times;</span>
             <h2>Crear Cuenta</h2>
             <form id="registerForm">
-                <input type="text" placeholder="Nombre Completo" required>
-                <input type="email" placeholder="Correo Electrónico" required>
-                <input type="password" placeholder="Contraseña" required>
-                <button type="submit">Registrarse</button>
-            </form>
+              <input type="text" id="nombreRegistro" placeholder="Nombre Completo" required>
+              <input type="email" id="correoRegistro" placeholder="Correo Electrónico" required>
+              <input type="password" placeholder="Contraseña" required>
+              <button type="submit">Registrarse</button>
+          </form>
         </div>
+    </div>
+    <script>
+      document.getElementById("registerForm").addEventListener("submit", function(e) {
+          e.preventDefault(); // Prevenir recarga
+      
+          const nombre = document.getElementById("nombreRegistro").value.trim();
+          const correo = document.getElementById("correoRegistro").value.trim();
+      
+          // Guardar en localStorage
+          localStorage.setItem("usuario_nombre", nombre);
+          localStorage.setItem("usuario_email", correo);
+      
+          // Cierra el modal
+          closeModal('registerModal');
+      
+          // Mensaje de confirmación
+          alert("Cuenta creada correctamente. Bienvenido/a, " + nombre + "!");
+      });
+      </script>
+</body>
+</html>
     </div>
 </body>
 </html>
