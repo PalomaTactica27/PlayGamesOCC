@@ -308,7 +308,8 @@ footer.social-links {
   header {
       color: #ff0000;
       position: flex;
-      left: 10%;
+      left: 15%;
+      top: 2%;
   }
 
 .logo-container{
@@ -320,14 +321,14 @@ footer.social-links {
 
   .pagina, .informacion{
       position: flex;
-      top: 10%;
+      top: 25%;
   }  
 
   .slider,
   .slider-right,
   .carousel-container,
   .carousel-container1 {
-    width: 150%;
+    width: 200%;
     left: 0;
     top: 60%;
   }
