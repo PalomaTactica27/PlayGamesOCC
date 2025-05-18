@@ -416,14 +416,14 @@ footer.social-links {
   header {
       color: #ff0000;
       position: flex;
-      left: 50%;
+      left: 70%;
       top: 1%;
   }
 
 .pagina, .informacion{
       position: flex;
       top: 12.5%;
-      width: 10%;
+      width: 20%;
   }  
 
   .slider,
@@ -452,6 +452,7 @@ footer.social-links {
   .carousel-slide1 .slide-content1 {
     flex-direction: column;
     text-align: center;
+    width: 150%;
   }
 
   .slide-image img,
