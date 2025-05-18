@@ -396,12 +396,12 @@ footer.social-links {
 @media screen and (max-width: 480px) {
   .txt1{
       position: flex;
-      top: 15%;
+      top: 18%;
       left: 10%;
   }
   .txt2 {
       position: flex;
-      top: 55%;
+      top: 60%;
       left: 10%;
   }
 
@@ -416,12 +416,12 @@ footer.social-links {
       color: #ff0000;
       position: flex;
       left: 50%;
-      top: 2%;
+      top: 1%;
   }
 
 .pagina, .informacion{
       position: flex;
-      top: 15%;
+      top: 18%;
   }  
 
   .slider,
@@ -480,8 +480,14 @@ footer.social-links {
     width: 90%;
   }
 
-  .banner,
+  .banner{
+      width: 100%;
+      position: flex;
+      top: 20%;
+  }
   .banner1 {
+    position: flex;
+    top: 65%;  
     width: 100%;  
     margin: 1rem 0;
   }
