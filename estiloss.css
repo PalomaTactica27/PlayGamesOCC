@@ -281,22 +281,16 @@ body {
     100% { left: 100%; }
 }
 
+.header {
+  text-align: center;
+  padding: 1rem;
+  color: #ff0000;
+}
+
 a{
     color: #ab0000;
 }
 
-h1{
-    color: #ff0000;
-    font-size: 50px;
-}
-h2{
-    color: #ff0000;
-    font-size: 35px;
-}
-h3{
-    color: #ab0000;
-    font-size: 30px;
-}
 .meteor {
     position: absolute;
     width: 5px;
@@ -416,160 +410,146 @@ footer.social-links {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 35px;
-    }
+@media screen and (max-width: 768px) {
 
-    h2 {
-        font-size: 25px;
-    }
+  .txt1,
+  .txt2 {
+    position: static;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
 
-    h3 {
-        font-size: 20px;
-    }
+  .slider,
+  .slider-right,
+  .carousel-container,
+  .carousel-container1 {
+    width: 100%;
+    left: 0;
+    top: auto;
+  }
 
-    .logo-container {
-        position: relative;
-        top: -175px;
-        left: 660px;
-        width: 80px;
-        height: 80px;
-    }
+  .prev,
+  .nextx,
+  .next-right,
+  .prev-right {
+    font-size: 24px;
+    padding: 8px;
+  }
 
-    .informacion {
-        width: 25%;
-        font-size: large;
-        margin: 20px auto;
-        position: relative;
-        top: -160px;
-        text-align: center;
-    }
-    .pagina {
-        width: 25%;
-        font-size: large;
-        margin: 20px auto;
-        position: relative;
-        top: -80px;
-        text-align: center;
-    }
+  .nextx {
+    left: auto;
+    right: 10px;
+  }
 
-    .slider {
-        width: 75%;
-        margin: 0 auto;
-        position: absolute;
-        left: 15%;
-        top: 500px;
-    }
-    .slider-right {
-        width: 75%;
-        margin: 0 auto;
-        position: absolute;
-        left: 15%;
-        top: 1400px;
-    }
-    .txt1 {
-        font-size: 30px;
-        position: relative;
-        top: 5px;
-        left: 30%;
-    }
-    .txt2{
-        font-size: 30px;
-        position: relative;
-        top: 800px;
-        left: 30%;
-    }
+  .carousel-slide .slide-content,
+  .carousel-slide1 .slide-content1 {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .social-links {
-        padding: 20px;
-        font-size: 14px;
-        position: fixed;
-    }
+  .slide-image img,
+  .slide-image1 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
 
-    .social-icon img {
-        width: 30px;
-        flex-direction: row;
-    }
+  .slide-description,
+  .slide-description1 {
+    padding: 0.5rem;
+  }
 
-    .auth-buttons button {
-        font-size: 14px;
-    }
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
 
-    .auth-buttons {
-        flex-direction: row;
-    }
+  .modal-content {
+    width: 90%;
+  }
 
-    .modal-content {
-        width: 90%;
-    }
+  .banner,
+  .banner1 {
+    margin: 1rem 0;
+  }
 
-    .modal-content input {
-        width: 100%;
-    }
+  .carousel-indicators span,
+  .carousel-indicators1 span {
+    width: 10px;
+    height: 10px;
+  }
+}
 
-    .storm-clouds {
-        position: absolute;
-        top: 2200px;
-        bottom: 0;
-        left: 0;
-        width: 150%;
-        height: 150px;
-        background: linear-gradient(0deg, 
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(30, 0, 0, 0.5) 40%,
-            rgba(30, 0, 0, 0.2) 80%,
-            transparent 100%);
-        z-index: 0;
-    }
+* {
+  box-sizing: border-box;
 }
 
 /* Media Query para pantallas muy pequeñas (móviles en modo vertical) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
 
-    h2 {
-        font-size: 22px;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    h3 {
-        font-size: 18px;
-    }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .logo-container {
-        width: 60px;
-        height: 60px;
-    }
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+  }
 
-    .pagina, .informacion {
-        width: 90%;
-        font-size: medium;
-        margin: 10px auto;
-    }
+  .carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-    .slider {
-        width: 100%;
-    }
+  .arrow {
+    font-size: 24px;
+    padding: 8px;
+    top: 45%;
+  }
 
-    .txt1, .txt2 {
-        font-size: 16px;
-        position: relative;
-        top: 5px;
-    }
+  .game-card {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+  }
 
-    .social-links {
-        font-size: 12px;
-    }
+  .game-card img {
+    width: 100%;
+    height: auto;
+  }
 
-    .social-icon img {
-        width: 25px;
-    }
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 
-    .auth-buttons button {
-        font-size: 12px;
-    }
+  .buttons button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 5px;
+  }
 }
 .banner {
     display: block;
