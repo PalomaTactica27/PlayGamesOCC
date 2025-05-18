@@ -193,7 +193,7 @@ a{
     color: #ab0000;
 }
 
-.meteor {
+meteor {
     position: absolute;
     width: 2%;
     height: 1%;
@@ -203,7 +203,7 @@ a{
     animation: fall linear infinite;
 }
 
-@keyframes fall {
+keyframes fall {
     from {
         transform: translateY(-1000px) translateX(0) rotate(45deg);
         opacity: 1;
