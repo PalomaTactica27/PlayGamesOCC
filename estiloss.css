@@ -394,66 +394,97 @@ footer.social-links {
 
 /* Media Query para pantallas muy pequeñas (móviles en modo vertical) */
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
+  .txt1{
+      position: flex;
+      top: 20%;
+      left: 10%;
   }
+  .txt2 {
+      position: flex;
+      top: 40%;
+      left: 10%;
+  }
+
+  .logo-container{
+    height: 16%;
+    width: 8%;
+    top: 2%;
+    right: 2%;
+  }  
 
   header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #ff0000;
+      color: #ff0000;
+      position: flex;
+      left: 25%;
+      top: 2%;
   }
 
-  nav {
-    flex-direction: column;
-    gap: 10px;
+.pagina, .informacion{
+      position: flex;
+      top: 35%;
+  }  
+
+  .slider,
+  .slider-right,
+  .carousel-container,
+  .carousel-container1 {
+    width: 200%;
+    left: 0;
+    top: 60%;
   }
 
-  .carousel {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .arrow {
+  .prev,
+  .nextx,
+  .next-right,
+  .prev-right {
     font-size: 24px;
     padding: 8px;
-    top: 45%;
   }
 
-  .game-card {
+  .nextx {
+    left: auto;
+    right: 10px;
+  }
+
+  .carousel-slide .slide-content,
+  .carousel-slide1 .slide-content1 {
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
+    text-align: center;
   }
 
-  .game-card img {
+  .slide-image img,
+  .slide-image1 img {
     width: 100%;
+    max-width: 300px;
     height: auto;
+    margin: 0 auto;
   }
 
-  .buttons {
+  .slide-description,
+  .slide-description1 {
+    padding: 0.5rem;
+  }
+
+  .auth-buttons {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    margin-top: 1rem;
   }
 
-  .buttons button {
-    width: 100%;
-    font-size: 16px;
+  .modal-content {
+    width: 90%;
   }
 
-  footer {
-    text-align: center;
-    font-size: 12px;
-    padding: 15px 5px;
+  .banner,
+  .banner1 {
+    margin: 1rem 0;
+  }
+
+  .carousel-indicators span,
+  .carousel-indicators1 span {
+    width: 10px;
+    height: 10px;
   }
 }
 .banner {
