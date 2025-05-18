@@ -193,26 +193,6 @@ a{
     color: #ab0000;
 }
 
-meteor {
-    position: absolute;
-    width: 2%;
-    height: 1%;
-    background: rgb(255, 115, 0);
-    opacity: 0.8;
-    transform: rotate(45deg);
-    animation: fall linear infinite;
-}
-
-keyframes fall {
-    from {
-        transform: translateY(-1000px) translateX(0) rotate(45deg);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(1vh) translateX(50vw) rotate(45deg);
-        opacity: 0;
-    }
-}
 footer.social-links {
     position: fixed;
     bottom: 0;
