@@ -428,7 +428,7 @@ footer.social-links {
   .slider-right,
   .carousel-container,
   .carousel-container1 {
-    width: 300%;
+    width: 100%;
     left: 0;
     top: 60%;
   }
@@ -472,12 +472,17 @@ footer.social-links {
     margin-top: 1rem;
   }
 
+  footer.social-links {
+    text-align: right;
+}  
+
   .modal-content {
     width: 90%;
   }
 
   .banner,
   .banner1 {
+    width: 100%;  
     margin: 1rem 0;
   }
 
