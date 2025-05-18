@@ -476,6 +476,7 @@ footer.social-links {
     flex-direction: row;
     gap: 10px;
     margin-top: 1rem;
+    bottom: 3%;
   }
 
   footer.social-links {
