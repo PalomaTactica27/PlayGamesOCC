@@ -316,7 +316,7 @@ footer.social-links {
 
   .txt1,
   .txt2 {
-    position: static;
+    position: flex;
     text-align: center;
     font-size: 1.2rem;
     margin: 1rem 0;
