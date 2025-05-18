@@ -396,7 +396,7 @@ footer.social-links {
 @media screen and (max-width: 480px) {
   .txt1{
       position: flex;
-      top: 16%;
+      top: 15.5%;
       left: 10%;
   }
   .txt2 {
@@ -422,7 +422,7 @@ footer.social-links {
 
 .pagina, .informacion{
       position: flex;
-      top: 15%;
+      top: 13.5%;
   }  
 
   .slider,
