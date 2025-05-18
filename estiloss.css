@@ -426,7 +426,7 @@ footer.social-links {
       top: 12.5%;
       width: 50%;
       height: 10%;
-      gap: 10%;
+      gap: 20%;
   }  
 
   .slider,
@@ -434,7 +434,7 @@ footer.social-links {
   .carousel-container,
   .carousel-container1 {
     width: 150%;
-    left: 20%;
+    left: 40%;
     top: 60%;
   }
 
