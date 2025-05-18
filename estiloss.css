@@ -322,6 +322,10 @@ footer.social-links {
     margin: 1rem 0;
   }
 
+  header {
+    color: #ff0000;
+  }
+
   .slider,
   .slider-right,
   .carousel-container,
