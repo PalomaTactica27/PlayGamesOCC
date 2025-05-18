@@ -306,23 +306,30 @@ footer.social-links {
   }
 
   header {
-    color: #ff0000;
+      color: #ff0000;
+      position: flex;
+      left: 10%;
   }
 
 .logo-container{
     height: 10%;
-    width: 6%;
+    width: 10%;
     top: 2%;
     right: 2%;
   }
+
+  .pagina, .informacion{
+      position: flex;
+      top: 10%;
+  }  
 
   .slider,
   .slider-right,
   .carousel-container,
   .carousel-container1 {
-    width: 100%;
+    width: 150%;
     left: 0;
-    top: 50%;
+    top: 60%;
   }
 
   .prev,
