@@ -421,13 +421,21 @@ footer.social-links {
       
   }
 
-.pagina, .informacion{
-      position: flex;
-      top: 12.5%;
-      width: 50%;
-      height: 10%;
-      gap: 20%;
-  }  
+.pagina{
+    position: flex;
+    top: 12.5%;
+    left: 10%;
+    width: 50%;
+    height: 10%;
+  }
+
+.informacion{
+    position: flex;
+    top: 12.5%;
+    right: 10%;
+    width: 50%;
+    height: 10%;
+  } 
 
   .slider,
   .slider-right,
