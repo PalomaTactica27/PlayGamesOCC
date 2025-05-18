@@ -7,67 +7,20 @@
   }
 
   .txt1{
-    font-size: 30px;
+    font-size: 200%;
     position: absolute;
-    top: 175px;
-    left: 145px;
+    top: 15%;
+    left: 10%;
     color: #d23b09;
   }
 
 .txt2{
-    font-size: 30px;
+    font-size: 200%;
     position: absolute;
-    top: 585px;
-    left: 145px;
+    top: 48.5%;
+    left: 10%;
     color: #d23b09;
   }
-
-  .slide {
-    position: relative;
-    text-align: center;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-}
-
-.slide-text {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.slider {
-    position: relative;
-    top: 75px;
-    left: 100px;
-    width: 600px;
-    max-width: 800px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    border-radius: 10px;
-}
 
 .prev, .nextx {
     position: absolute;
@@ -82,47 +35,9 @@
     border-radius: 5px;
 }
 
-.prev { left: 10px; }
-.nextx { left: 1450px; }
+.prev { left: 1%; }
+.nextx { right: 2%; }
 
-.slider-right {
-    position: relative;
-    top: -680px;
-    left: 850px;
-    width: 600px; 
-    max-width: 800px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .slides-right {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide-right {
-    min-width: 100%;
-    position: relative;
-  }
-
-  .slide-right img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
-  .slide-text-right {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-  }
 
   .prev-right, .next-right {
     position: absolute;
@@ -137,8 +52,8 @@
     border-radius: 5px;
   }
 
-  .prev-right { left: 10px; }
-  .next-right { right: 10px; }
+  .prev-right { left: 1%; }
+  .next-right { right: 1%; }
 
 body {
     background-color: var(--carbon-bg);
@@ -160,20 +75,13 @@ body {
     position: relative;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
 .logo-container {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 2%;
+    right: 2%;
     z-index: 1000;
-    width: 100px;
-    height: 100px;
+    width: 8%;
+    height: 16%;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--red-stripes);
@@ -186,19 +94,13 @@ body {
     bottom: 0;
     left: 0;
     width: 150%;
-    height: 150px;
+    height: 15%;
     background: linear-gradient(0deg, 
         rgba(0, 0, 0, 0.8) 0%,
         rgba(30, 0, 0, 0.5) 40%,
         rgba(30, 0, 0, 0.2) 80%,
         transparent 100%);
     z-index: 0;
-}
-
-.main-content {
-    position: relative;
-    z-index: 2;
-    padding-bottom: 80px;
 }
 
 .logo-container:hover {
@@ -241,8 +143,8 @@ body {
     box-shadow: 0 0 10px rgba(124, 3, 3, 0.2);
     text-align: center;
     position: absolute;
-    top: 50px;
-    left: 150px;
+    top: 4%;
+    left: 13%;
     color: #ab0000;
 }
 .pagina:hover {
@@ -266,8 +168,8 @@ body {
     box-shadow: 0 0 10px rgba(124, 3, 3, 0.2);
     text-align: center;
     position: absolute;
-    top: 50px;
-    right: 150px;
+    top: 4%;
+    right: 13%;
 }
 
 .informacion:hover {
@@ -293,8 +195,8 @@ a{
 
 .meteor {
     position: absolute;
-    width: 5px;
-    height: 10px;
+    width: 2%;
+    height: 1%;
     background: rgb(255, 115, 0);
     opacity: 0.8;
     transform: rotate(45deg);
@@ -314,7 +216,7 @@ a{
 footer.social-links {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0%;
     width: 100%;
     z-index: 9999;
     background-color: rgb(35, 33, 33);
@@ -331,11 +233,11 @@ footer.social-links {
 }
 .auth-buttons {
     position: absolute;
-    top: 20px;
-    left: 25%;
+    top: 25%;
+    left: 20%;
     transform: translateX(-50%);
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .auth-buttons button {
@@ -345,7 +247,7 @@ footer.social-links {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 85%;
     transition: 0.3s;
 }
 
@@ -356,8 +258,8 @@ footer.social-links {
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
@@ -371,7 +273,7 @@ footer.social-links {
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    width: 400px;
+    width: 30%;
     position: relative;
 }
 
@@ -403,9 +305,9 @@ footer.social-links {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
+    top: 2%;
+    right: 2%;
+    font-size: 200%;
     color: white;
     cursor: pointer;
 }
@@ -499,6 +401,7 @@ footer.social-links {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #ff0000;
   }
 
   nav {
