@@ -310,8 +310,8 @@ footer.social-links {
   }
 
 .logo-container{
-    height: 16%;
-    width: 8%;
+    height: 10%;
+    width: 6%;
     top: 2%;
     right: 2%;
   }
@@ -322,7 +322,7 @@ footer.social-links {
   .carousel-container1 {
     width: 100%;
     left: 0;
-    top: 40%;
+    top: 50%;
   }
 
   .prev,
