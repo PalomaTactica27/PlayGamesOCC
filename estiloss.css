@@ -326,6 +326,13 @@ footer.social-links {
     color: #ff0000;
   }
 
+.logo-container{
+    height: 16%;
+    width: 8%;
+    top: 2%;
+    right: 2%;
+  }
+
   .slider,
   .slider-right,
   .carousel-container,
