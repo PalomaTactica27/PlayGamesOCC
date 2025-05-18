@@ -296,12 +296,12 @@ footer.social-links {
 
   .txt1{
       position: flex;
-      top: 20%;
+      top: 10%;
       left: 10%;
   }
   .txt2 {
       position: flex;
-      top: 40%;
+      top: 50%;
       left: 10%;
   }
 
@@ -321,7 +321,7 @@ footer.social-links {
 
   .pagina, .informacion{
       position: flex;
-      top: 35%;
+      top: 25%;
   }  
 
   .slider,
