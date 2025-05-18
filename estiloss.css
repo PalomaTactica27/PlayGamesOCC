@@ -508,20 +508,6 @@ footer.social-links {
         width: 100%;
     }
 
-    .meteor {
-        width: 4px;
-        height: 8px;
-    }
-    @keyframes fall {
-        from {
-            transform: translateY(-1000px) translateX(0) rotate(45deg);
-            opacity: 1;
-        }
-        to {
-            transform: translateY(220vh) translateX(50vw) rotate(45deg);
-            opacity: 0;
-        }
-    }
     .storm-clouds {
         position: absolute;
         top: 2200px;
