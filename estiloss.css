@@ -314,7 +314,7 @@ footer.social-links {
 
 .logo-container{
     height: 8%;
-    width: 8%;
+    width: 16%;
     top: 2%;
     right: 2%;
   }
@@ -367,7 +367,7 @@ footer.social-links {
 
   .auth-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-top: 1rem;
   }
@@ -396,18 +396,18 @@ footer.social-links {
 @media screen and (max-width: 480px) {
   .txt1{
       position: flex;
-      top: 10%;
+      top: 12%;
       left: 10%;
   }
   .txt2 {
       position: flex;
-      top: 50%;
+      top: 55%;
       left: 10%;
   }
 
   .logo-container{
-    height: 16%;
-    width: 8%;
+    height: 8%;
+    width: 16%;
     top: 2%;
     right: 2%;
   }  
@@ -421,14 +421,14 @@ footer.social-links {
 
 .pagina, .informacion{
       position: flex;
-      top: 5%;
+      top: 10%;
   }  
 
   .slider,
   .slider-right,
   .carousel-container,
   .carousel-container1 {
-    width: 200%;
+    width: 300%;
     left: 0;
     top: 60%;
   }
@@ -467,7 +467,7 @@ footer.social-links {
 
   .auth-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     margin-top: 1rem;
   }
