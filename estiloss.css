@@ -416,7 +416,7 @@ footer.social-links {
   header {
       color: #ff0000;
       position: flex;
-      left: 70%;
+      left: 100%;
       top: 1%;
   }
 
@@ -424,6 +424,7 @@ footer.social-links {
       position: flex;
       top: 12.5%;
       width: 50%;
+      height: 10%;
   }  
 
   .slider,
