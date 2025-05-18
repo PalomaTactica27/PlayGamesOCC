@@ -434,7 +434,7 @@ footer.social-links {
   .carousel-container,
   .carousel-container1 {
     width: 200%;
-    left: 40%;
+    left: 20%;
     top: 60%;
   }
 
@@ -488,14 +488,15 @@ footer.social-links {
   }
 
   .banner{
-      width: 150%;
+      position: flex;
+      width: 200%;
       position: flex;
       top: 20%;
   }
   .banner1 {
     position: flex;
     top: 65%;  
-    width: 150%;  
+    width: 200%;  
     margin: 1rem 0;
   }
 
