@@ -406,6 +406,7 @@ footer.social-links {
   }
 
   .logo-container{
+    position: flex;
     height: 8%;
     width: 16%;
     top: 2%;
@@ -481,14 +482,14 @@ footer.social-links {
   }
 
   .banner{
-      width: 100%;
+      width: 150%;
       position: flex;
       top: 20%;
   }
   .banner1 {
     position: flex;
     top: 65%;  
-    width: 100%;  
+    width: 150%;  
     margin: 1rem 0;
   }
 
